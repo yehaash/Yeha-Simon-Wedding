@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeha & Simon Wedding</title>
+    <style>
+        body { 
+            margin: 0; padding: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", sans-serif;
+            background: #fff; color: #1a1a1a;
+            line-height: 1.5; word-break: keep-all;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        section { text-align: center; }
+
+        /* 1. 상단 정보 */
+        .hero-section { padding: 70px 24px 45px; }
+        .hero-text { font-size: 0.82rem; font-weight: 400; color: #666; letter-spacing: 0.02rem; line-height: 1.7; }
+        .hero-text b { font-weight: 600; color: #1a1a1a; display: block; font-size: 0.88rem; margin-top: 3px; }
+        .hero-text .eng-sub { font-size: 0.72rem; color: #aaa; text-transform: uppercase; margin-top: 5px; display: block; letter-spacing: 0.05rem; }
+
+        /* 이미지 공통 */
+        .img-wrap { width: 100%; overflow: hidden; display: block; line-height: 0; }
+        .img-wrap img { width: 100%; height: auto; display: block; }
+
+        /* 2. 인사말 */
+        .greeting-section { padding: 35px 28px 85px; }
+        .main-message { font-size: 1.05rem; font-weight: 400; }
+        .main-message .sub-text { font-size: 0.82rem; color: #888; margin-top: 18px; display: block; line-height: 1.5; font-weight: 300; }
+
+        /* 3. 성함 섹션 */
+        .names-section { padding: 90px 28px; border-top: 1px solid #f5f5f5; }
+        .names-list { font-size: 0.98rem; line-height: 2.3; }
+        .names-list b { font-weight: 600; }
+        .names-list .sub-text { font-size: 0.78rem; color: #aaa; margin-top: 22px; display: block; line-height: 1.6; font-weight: 300; }
+
+        /* 4. 계좌 정보 (추가됨) */
+        .account-section { padding: 60px 28px 100px; background: #fff; }
+        .account-title { font-size: 0.85rem; font-weight: 600; margin-bottom: 30px; letter-spacing: 0.05rem; color: #333; }
+        .account-box { margin-bottom: 15px; }
+        .copy-btn { 
+            display: inline-block; width: 100%; max-width: 280px; padding: 15px 0; 
+            border: 1px solid #e2e2e2; background: #fff; font-size: 0.8rem; 
+            color: #555; cursor: pointer; transition: 0.2s;
+        }
+        .copy-btn:active { background: #f9f9f9; border-color: #000; color: #000; }
+
+        /* 5. 삽화 섹션 */
+        .illust-section { padding: 0; background: #fff; }
+        .split-illust img { width: 85%; margin: 0 auto; }
+
+        /* 6. 위치 정보 및 API 지도 */
+        .location-section { background: #fafafa; padding: 110px 24px; }
+        .address-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+        .address-detail { font-size: 0.92rem; color: #555; margin-bottom: 35px; }
+        #kakao-map { width: 100%; height: 380px; background: #eee; margin-bottom: 25px; border: 1px solid #ddd; }
+        
+        .map-btn { 
+            display: inline-block; width: 100%; max-width: 300px; padding: 14px 0; border: 1px solid #000; 
+            font-size: 0.8rem; font-weight: 500; text-decoration: none; color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section reveal">
+        <div class="hero-text">
+            2026. 04. 25 13:00
+            <b>영종도 네스트 호텔</b>
+            <span class="eng-sub">Nest Hotel Yeongjongdo</span>
+        </div>
+    </section>
+
+    <div class="img-wrap reveal">
+        <img src="https://cdn.imweb.me/upload/S2026030268996512d33da/9865370a4da49.jpg" alt="Main Photo">
+    </div>
+
+    <section class="greeting-section reveal">
+        <div class="main-message">
+            예하와 사이먼 결혼합니다.<br>함께 축하해주세요.
+            <span class="sub-text">Yeha and Simon are getting married.<br>Come and celebrate!</span>
+        </div>
+    </section>
+
+    <section class="names-section reveal">
+        <div class="names-list">
+            박해도 · 이상희의 딸 <b>박예하</b><br>
+            故 크리스토퍼 졸리 · 파멜라 졸리의 아들<br><b>사이먼 크리스토퍼 졸리 윌슨</b>
+            <span class="sub-text">Daughter of Park Hae-do · Lee Sang-huie, Park Yeha<br>Son of Christopher Jolly · Pam Jolly, Simon Christopher Jolly Wilson</span>
+        </div>
+    </section>
+
+    <section class="account-section reveal">
+        <div class="account-title">마음 전하실 곳</div>
+        <div class="account-box">
+            <button class="copy-btn" onclick="copyText('OO은행 123-456-7890 (박예하)')">신부측 계좌번호 복사</button>
+        </div>
+        <div class="account-box">
+            <button class="copy-btn" onclick="copyText('OO은행 098-765-4321 (사이먼)')">신랑측 계좌번호 복사</button>
+        </div>
+    </section>
+
+    <section class="illust-section">
+        <div class="img-wrap reveal split-illust"><img src="https://cdn.imweb.me/upload/S2026030268996512d33da/058ffda34fb3b.png" alt="Illust 1"></div>
+        <div class="img-wrap reveal split-illust"><img src="https://cdn.imweb.me/upload/S2026030268996512d33da/a26adead52572.png" alt="Illust 2"></div>
+        <div class="img-wrap reveal"><img src="https://cdn.imweb.me/upload/S2026030268996512d33da/98181d768f324.png" alt="Illust 3"></div>
+        <div class="img-wrap reveal"><img src="https://cdn.imweb.me/upload/S2026030268996512d33da/1327ba21c2f2b.png" alt="Illust 4"></div>
+    </section>
+
+    <section class="location-section reveal">
+        <div class="address-title">Nest Hotel Yeongjongdo</div>
+        <div class="address-detail">인천광역시 중구 영종해안남로 19-5</div>
+        <div id="kakao-map"></div>
+        <div class="map-buttons"><a href="https://map.kakao.com/link/to/네스트호텔,37.4249727,126.4280671" target="_blank" class="map-btn">KAKAOMAP</a></div>
+    </section>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=872a9e4cacb2f851e200d1e1629bb297"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        var mapContainer = document.getElementById('kakao-map'), 
+            mapOption = { center: new kakao.maps.LatLng(37.4249727, 126.4280671), level: 3 }; 
+        var map = new kakao.maps.Map(mapContainer, mapOption); 
+        var marker = new kakao.maps.Marker({ position: new kakao.maps.LatLng(37.4249727, 126.4280671) });
+        marker.setMap(map);
+        map.setZoomable(false);
+
+        function copyText(val) {
+            navigator.clipboard.writeText(val).then(() => { alert('계좌번호가 복사되었습니다.'); });
+        }
+    </script>
+</body>
+</html>
