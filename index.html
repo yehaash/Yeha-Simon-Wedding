@@ -120,4 +120,9 @@
         var mapContainer = document.getElementById('kakao-map'), 
             mapOption = { center: new kakao.maps.LatLng(37.4249727, 126.4280671), level: 3 }; 
         var map = new kakao.maps.Map(mapContainer, mapOption); 
-        var marker = new
+        var marker = new kakao.maps.Marker({ position: new kakao.maps.LatLng(37.4249727, 126.4280671) });
+        marker.setMap(map);
+        map.setZoomable(false);
+    </script>
+</body>
+</html>
