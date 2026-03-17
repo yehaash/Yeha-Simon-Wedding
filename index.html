@@ -33,17 +33,17 @@
         .btn-sub { font-size: 0.7rem; color: #999; display: block; margin-top: 2px; font-weight: 300; }
 
         .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: var(--bg-gray); }
-        .accordion-content.open { max-height: 500px; padding: 25px 0; border: 1px solid #eee; margin-bottom: 20px; }
+        .accordion-content.open { max-height: 600px; padding: 30px 0; border: 1px solid #eee; margin-bottom: 20px; }
         .contact-row { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-        .contact-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
-        .contact-name { font-size: 0.9rem; font-weight: 500; margin-bottom: 5px; }
-        .contact-name span { font-size: 0.75rem; color: #999; display: block; font-weight: 300; }
+        .contact-item { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 140px; }
+        .contact-name { font-size: 0.9rem; font-weight: 600; margin-bottom: 10px; }
+        .contact-name span { font-size: 0.75rem; color: #999; display: block; font-weight: 300; margin-top: 2px; }
         
-        .mini-copy-btn { padding: 5px 10px; font-size: 0.7rem; border: 1px solid #ccc; color: #666; background: #fff; cursor: pointer; border-radius: 2px; display: block; width: 100%; text-align: center; margin-top: 2px; }
-        .contact-info-text { font-size: 0.78rem; color: #555; margin-bottom: 2px; }
+        .mini-copy-btn { padding: 5px 0; font-size: 0.68rem; border: 1px solid #ddd; color: #777; background: #fff; cursor: pointer; border-radius: 2px; width: 100%; margin-bottom: 12px; }
+        .contact-val { font-size: 0.75rem; color: #555; font-weight: 400; }
 
         .illust-container { padding: 0; background: #fff; }
-        .illust-item { margin-bottom: 70px; }
+        .illust-item { margin-bottom: 75px; }
         .portrait img { width: 75%; margin: 0 auto; display: block; }
         .landscape img { width: 100%; display: block; }
         .schedule-info { padding: 20px 24px 0; }
@@ -53,14 +53,14 @@
         .loc-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; text-align: center; display: block; }
         .loc-addr { font-size: 0.9rem; color: #555; line-height: 1.6; margin-bottom: 35px; text-align: center; }
         
-        .transport-info { margin-top: 25px; padding-top: 25px; border-top: 1px solid #eee; }
-        .transport-item { margin-bottom: 25px; }
-        .trans-label { font-size: 0.88rem; font-weight: 600; color: #1a1a1a; display: block; margin-bottom: 5px; }
+        .transport-info { margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd; }
+        .transport-item { margin-bottom: 30px; }
+        .trans-label { font-size: 0.88rem; font-weight: 600; color: #1a1a1a; display: block; margin-bottom: 6px; }
         .trans-desc { font-size: 0.82rem; color: #666; line-height: 1.6; display: block; }
-        .shuttle-time { display: flex; gap: 10px; margin-top: 10px; justify-content: flex-start; }
-        .time-chip { background: #fff; border: 1px solid #ddd; padding: 4px 10px; font-size: 0.8rem; color: #333; }
+        .shuttle-time { display: flex; gap: 8px; margin-top: 12px; }
+        .time-chip { background: #fff; border: 1px solid #ddd; padding: 4px 10px; font-size: 0.78rem; color: #333; font-weight: 500; }
 
-        .credit-section { padding: 60px 0 80px; font-size: 0.7rem; color: #bbb; letter-spacing: 0.05rem; font-weight: 300; line-height: 1.8; text-align: center; }
+        .credit-section { padding: 60px 0 80px; font-size: 0.7rem; color: #bbb; letter-spacing: 0.05rem; font-weight: 300; line-height: 2; text-align: center; }
     </style>
 </head>
 <body>
@@ -90,23 +90,23 @@
             <div class="contact-row">
                 <div class="contact-item">
                     <div class="contact-name">박예하<span>Park Yeha</span></div>
-                    <div class="contact-info-text">010-9420-8791</div>
+                    <span class="contact-val">010-9420-8791</span>
                     <button class="mini-copy-btn" onclick="copy('010-9420-8791')">번호 복사</button>
-                    <div class="contact-info-text" style="margin-top:8px;">yeha.ash@gmail.com</div>
+                    <span class="contact-val">yeha.ash@gmail.com</span>
                     <button class="mini-copy-btn" onclick="copy('yeha.ash@gmail.com')">메일 복사</button>
                 </div>
                 <div class="contact-item">
                     <div class="contact-name">사이먼 윌슨<span>Simon Wilson</span></div>
-                    <div class="contact-info-text">010-7990-8791</div>
+                    <span class="contact-val">010-7990-8791</span>
                     <button class="mini-copy-btn" onclick="copy('010-7990-8791')">번호 복사</button>
-                    <div class="contact-info-text" style="margin-top:8px;">simonwilson@gmail.com</div>
+                    <span class="contact-val">simonwilson@gmail.com</span>
                     <button class="mini-copy-btn" onclick="copy('simonwilson@gmail.com')">메일 복사</button>
                 </div>
             </div>
         </div><br>
         <button class="action-btn" onclick="toggleAcc('accContent')">마음 전하실 곳<span class="btn-sub">Gifts</span></button>
         <div id="accContent" class="accordion-content">
-            <div class="contact-item" style="justify-content: center;">
+            <div class="contact-item" style="width: 250px; margin: 0 auto;">
                 <div class="contact-name">우리은행 1002-743-718932<span>박예하</span></div>
                 <button class="mini-copy-btn" onclick="copy('우리은행 1002-743-718932')">계좌번호 복사하기</button>
             </div>
@@ -128,7 +128,7 @@
             <span class="eng-sub" style="color:#999; margin-top:4px;">19-5, Yeongjonghaeannam-ro, Jung-gu, Incheon</span>
         </div>
 
-        <div style="text-align: center; margin-bottom: 40px;">
+        <div style="text-align: center; margin-bottom: 50px;">
             <a href="https://map.kakao.com/link/to/네스트호텔,37.4249727,126.4280671" target="_blank" class="action-btn">카카오맵 길찾기<span class="btn-sub">Kakaomap</span></a><br>
             <a href="https://naver.me/G87SAt9Z" target="_blank" class="action-btn">네이버 지도 길찾기<span class="btn-sub">Naver Map</span></a>
         </div>
@@ -137,17 +137,15 @@
             <div class="transport-item">
                 <span class="trans-label">공항철도 (Airport Line)</span>
                 <span class="trans-desc">서울역 → 인천국제공항 제1터미널역 (53분 소요) 하차 후 네스트호텔 행 셔틀버스 탑승</span>
-                <span class="trans-desc" style="color:#999; font-size:0.75rem;">Seoul Station → Incheon Int'l Airport Terminal 1 (53 min)</span>
+                <span class="trans-desc" style="color:#999; font-size:0.75rem; margin-top:2px;">Seoul Station → Incheon Int'l Airport Terminal 1 (53 min)</span>
             </div>
 
             <div class="transport-item">
                 <span class="trans-label">인천국제공항 셔틀버스 (Shuttle Bus)</span>
                 <span class="trans-desc">제1여객터미널 1층 14C 게이트</span>
-                <span class="trans-desc" style="color:#999; font-size:0.75rem;">Terminal 1, 1st floor, gate 14C</span>
+                <span class="trans-desc" style="color:#999; font-size:0.75rem; margin-top:2px;">Terminal 1, 1st floor, gate 14C</span>
                 <div class="shuttle-time">
-                    <div class="time-chip">12:15</div>
-                    <div class="time-chip">12:30</div>
-                    <div class="time-chip">12:45</div>
+                    <div class="time-chip">12:15</div><div class="time-chip">12:30</div><div class="time-chip">12:45</div>
                 </div>
             </div>
         </div>
@@ -161,14 +159,17 @@
     <script>
         const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('active') }), {threshold:0.1});
         document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+        
         function toggleAcc(id) {
             const el = document.getElementById(id); const isOpen = el.classList.contains('open');
             document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
             if(!isOpen) el.classList.add('open');
         }
+        
         function copy(v) {
             const t = document.createElement('textarea'); t.value = v; document.body.appendChild(t);
-            t.select(); document.execCommand('copy'); document.body.removeChild(t); alert('복사되었습니다.');
+            t.select(); document.execCommand('copy'); document.body.removeChild(t); 
+            alert('복사되었습니다.');
         }
     </script>
 </body>
