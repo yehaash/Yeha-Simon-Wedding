@@ -49,15 +49,16 @@
         .schedule-info { padding: 20px 24px 0; }
         .schedule-info b { font-size: 0.9rem; font-weight: 600; display: block; }
 
+        /* 위치 및 상세 교통 정보 섹션 */
         .location-section { background: var(--bg-gray); padding: 80px 28px; text-align: left; }
         .loc-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; text-align: center; display: block; }
         .loc-addr { font-size: 0.9rem; color: #555; line-height: 1.6; margin-bottom: 35px; text-align: center; }
         
-        .transport-info { margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd; }
+        .transport-info { margin-bottom: 40px; border-top: 1px solid #ddd; padding-top: 30px; }
         .transport-item { margin-bottom: 30px; }
         .trans-label { font-size: 0.88rem; font-weight: 600; color: #1a1a1a; display: block; margin-bottom: 6px; }
         .trans-desc { font-size: 0.82rem; color: #666; line-height: 1.6; display: block; }
-        .shuttle-time { display: flex; gap: 8px; margin-top: 12px; }
+        .shuttle-time { display: flex; gap: 8px; margin-top: 12px; justify-content: flex-start; }
         .time-chip { background: #fff; border: 1px solid #ddd; padding: 4px 10px; font-size: 0.78rem; color: #333; font-weight: 500; }
 
         .credit-section { padding: 60px 0 80px; font-size: 0.7rem; color: #bbb; letter-spacing: 0.05rem; font-weight: 300; line-height: 2; text-align: center; }
@@ -128,11 +129,6 @@
             <span class="eng-sub" style="color:#999; margin-top:4px;">19-5, Yeongjonghaeannam-ro, Jung-gu, Incheon</span>
         </div>
 
-        <div style="text-align: center; margin-bottom: 50px;">
-            <a href="https://map.kakao.com/link/to/네스트호텔,37.4249727,126.4280671" target="_blank" class="action-btn">카카오맵 길찾기<span class="btn-sub">Kakaomap</span></a><br>
-            <a href="https://naver.me/G87SAt9Z" target="_blank" class="action-btn">네이버 지도 길찾기<span class="btn-sub">Naver Map</span></a>
-        </div>
-
         <div class="transport-info">
             <div class="transport-item">
                 <span class="trans-label">공항철도 (Airport Line)</span>
@@ -148,6 +144,11 @@
                     <div class="time-chip">12:15</div><div class="time-chip">12:30</div><div class="time-chip">12:45</div>
                 </div>
             </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://map.kakao.com/link/to/네스트호텔,37.4249727,126.4280671" target="_blank" class="action-btn">카카오맵 길찾기<span class="btn-sub">Kakaomap</span></a><br>
+            <a href="https://naver.me/G87SAt9Z" target="_blank" class="action-btn">네이버 지도 길찾기<span class="btn-sub">Naver Map</span></a>
         </div>
     </section>
 
