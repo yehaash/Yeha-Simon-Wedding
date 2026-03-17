@@ -27,9 +27,11 @@
 
         .greeting-section { padding: 30px 28px 60px; }
         .names-section { padding: 60px 28px; border-top: 1px solid #f5f5f5; }
-        .names-list { font-size: 0.95rem; line-height: 2.2; margin-bottom: 35px; color: #333; }
-        .names-list b { font-size: 1.05rem; color: #000; }
-        .names-list span { font-size: 0.8rem; color: #999; font-weight: 300; }
+        
+        /* 성함 섹션: 원본 텍스트 호흡 반영 */
+        .names-list { font-size: 0.95rem; line-height: 1.8; margin-bottom: 35px; color: #333; }
+        .names-list b { font-size: 1.05rem; color: #000; display: block; margin: 4px 0 12px; }
+        .names-list .eng-text { font-size: 0.78rem; color: #999; font-weight: 300; display: block; margin-bottom: 12px; line-height: 1.4; }
         
         .action-btn { display: inline-block; width: 250px; padding: 12px 20px; border: 1px solid var(--main-color); background: transparent; font-size: 0.82rem; color: var(--main-color); text-decoration: none; cursor: pointer; margin-bottom: 10px; box-sizing: border-box; }
         .btn-sub { font-size: 0.7rem; color: #999; display: block; margin-top: 2px; font-weight: 300; }
@@ -84,9 +86,17 @@
 
     <section class="names-section reveal">
         <div class="names-list">
-            박해도 <span>Park Haedo</span> · 이상희 <span>Lee Sanghee</span>의 딸 <b>박예하</b> <span>Park Yeha</span><br>
-            故 크리스토퍼 졸리 <span>The late Christopher Joly</span> · 파멜라 졸리 <span>Pamela Joly</span>의 아들<br><b>사이먼 크리스토퍼 졸리 윌슨</b> <span>Simon Christopher Joly Wilson</span>
+            박해도 · 이상희의 딸
+            <span class="eng-text">Daughter of Park Haedo and Lee Sanghee</span>
+            <b>박예하</b>
+            <span class="eng-text">Park Yeha</span>
+            
+            故 크리스토퍼 졸리 · 파멜라 졸리의 아들
+            <span class="eng-text">Son of the late Christopher Jolly and Pamela Jolly</span>
+            <b>사이먼 크리스토퍼 졸리 윌슨</b>
+            <span class="eng-text">Simon Christopher Jolly Wilson</span>
         </div>
+        
         <button class="action-btn" onclick="toggleAcc('msgContent')">축하 메시지 보내기<span class="btn-sub">Contact</span></button>
         <div id="msgContent" class="accordion-content">
             <div class="contact-row">
@@ -106,6 +116,7 @@
                 </div>
             </div>
         </div><br>
+        
         <button class="action-btn" onclick="toggleAcc('accContent')">마음 전하실 곳<span class="btn-sub">Gifts</span></button>
         <div id="accContent" class="accordion-content">
             <div class="contact-item" style="width: 250px; margin: 0 auto;">
