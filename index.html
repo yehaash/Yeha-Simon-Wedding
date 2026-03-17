@@ -49,16 +49,16 @@
         .schedule-info { padding: 20px 24px 0; }
         .schedule-info b { font-size: 0.9rem; font-weight: 600; display: block; }
 
-        /* 위치 및 상세 교통 정보 섹션 */
-        .location-section { background: var(--bg-gray); padding: 80px 28px; text-align: left; }
-        .loc-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; text-align: center; display: block; }
-        .loc-addr { font-size: 0.9rem; color: #555; line-height: 1.6; margin-bottom: 35px; text-align: center; }
+        /* 위치 및 상세 교통 정보 섹션 (중앙 정렬 수정) */
+        .location-section { background: var(--bg-gray); padding: 80px 28px; text-align: center; }
+        .loc-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; display: block; }
+        .loc-addr { font-size: 0.9rem; color: #555; line-height: 1.6; margin-bottom: 35px; }
         
         .transport-info { margin-bottom: 40px; border-top: 1px solid #ddd; padding-top: 30px; }
         .transport-item { margin-bottom: 30px; }
         .trans-label { font-size: 0.88rem; font-weight: 600; color: #1a1a1a; display: block; margin-bottom: 6px; }
-        .trans-desc { font-size: 0.82rem; color: #666; line-height: 1.6; display: block; }
-        .shuttle-time { display: flex; gap: 8px; margin-top: 12px; justify-content: flex-start; }
+        .trans-desc { font-size: 0.82rem; color: #666; line-height: 1.6; display: block; padding: 0 10px; }
+        .shuttle-time { display: flex; gap: 8px; margin-top: 15px; justify-content: center; }
         .time-chip { background: #fff; border: 1px solid #ddd; padding: 4px 10px; font-size: 0.78rem; color: #333; font-weight: 500; }
 
         .credit-section { padding: 60px 0 80px; font-size: 0.7rem; color: #bbb; letter-spacing: 0.05rem; font-weight: 300; line-height: 2; text-align: center; }
@@ -132,7 +132,7 @@
         <div class="transport-info">
             <div class="transport-item">
                 <span class="trans-label">공항철도 (Airport Line)</span>
-                <span class="trans-desc">서울역 → 인천국제공항 제1터미널역 (53분 소요) 하차 후 네스트호텔 행 셔틀버스 탑승</span>
+                <span class="trans-desc">서울역 → 인천국제공항 제1터미널역 (53분 소요)<br>하차 후 네스트호텔 행 셔틀버스 탑승</span>
                 <span class="trans-desc" style="color:#999; font-size:0.75rem; margin-top:2px;">Seoul Station → Incheon Int'l Airport Terminal 1 (53 min)</span>
             </div>
 
